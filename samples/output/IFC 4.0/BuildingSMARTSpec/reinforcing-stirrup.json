@@ -1,0 +1,723 @@
+{
+  "type": "IFC.JSON",
+  "version": "0.0.1",
+  "schemaIdentifier": "IFC4",
+  "originatingSystem": "IFC2JSON_python Version 0.0.1",
+  "preprocessorVersion": "IfcOpenShell 0.0.0",
+  "timeStamp": "2025-05-29T12:50:13",
+  "data": [
+    {
+      "type": "IfcProject",
+      "globalId": "{4b610cbf-98be-49a1-9d21-e6a04a1e1bca}",
+      "ownerHistory": {
+        "type": "IfcOwnerHistory",
+        "ref": "6d6e67fa-c6fb-4ab9-bd11-dca3dd0bddec"
+      },
+      "name": "IfcProject",
+      "longName": "IfcProject",
+      "representationContexts": [
+        {
+          "type": "IfcGeometricRepresentationContext",
+          "ref": "e7d6b459-0920-49ad-98f9-a45fbecd9221"
+        }
+      ],
+      "unitsInContext": {
+        "type": "IfcUnitAssignment",
+        "units": [
+          {
+            "type": "IfcSIUnit",
+            "unitType": "LENGTHUNIT",
+            "prefix": "MILLI",
+            "name": "METRE",
+            "dimensions": {
+              "type": "IfcDimensionalExponents",
+              "LengthExponent": 1
+            }
+          },
+          {
+            "type": "IfcSIUnit",
+            "unitType": "PLANEANGLEUNIT",
+            "name": "RADIAN",
+            "dimensions": {
+              "type": "IfcDimensionalExponents"
+            }
+          },
+          {
+            "type": "IfcSIUnit",
+            "unitType": "TIMEUNIT",
+            "name": "SECOND",
+            "dimensions": {
+              "type": "IfcDimensionalExponents",
+              "TimeExponent": 1
+            }
+          }
+        ]
+      },
+      "isDecomposedBy": [
+        {
+          "type": "IfcRelAggregates",
+          "ref": "{8770f253-84ce-404a-9310-9864987aa353}"
+        }
+      ],
+      "hasAssociations": [
+        {
+          "type": "IfcRelAssociatesDocument",
+          "ref": "{83e6d182-61ea-4da6-a183-d912c1c611bb}"
+        }
+      ]
+    },
+    {
+      "type": "IfcReinforcingBar",
+      "globalId": "{c805ace2-25b6-4826-a524-70f97d4a9959}",
+      "objectPlacement": {
+        "type": "IfcLocalPlacement",
+        "placementRelTo": {
+          "type": "IfcLocalPlacement",
+          "relativePlacement": {
+            "type": "IfcAxis2Placement3D",
+            "location": {
+              "type": "IfcCartesianPoint",
+              "coordinates": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        "relativePlacement": {
+          "type": "IfcAxis2Placement3D",
+          "location": {
+            "type": "IfcCartesianPoint",
+            "coordinates": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "representation": {
+        "type": "IfcProductDefinitionShape",
+        "representations": [
+          {
+            "type": "IfcShapeRepresentation",
+            "ref": "3d800ac1-68b2-49af-9c91-703e34b3b459"
+          }
+        ]
+      },
+      "isTypedBy": [
+        {
+          "type": "IfcRelDefinesByType",
+          "ref": "{14847506-3aee-478b-9544-e3dee44f94c8}"
+        }
+      ],
+      "containedInStructure": [
+        {
+          "type": "IfcRelContainedInSpatialStructure",
+          "ref": "{5e50802d-76c1-4fa4-9b6a-7d3f7ca266e5}"
+        }
+      ]
+    },
+    {
+      "type": "IfcBuilding",
+      "globalId": "{20c95a95-626a-4801-8a73-5a93854cd4fc}",
+      "name": "IfcBuilding",
+      "objectPlacement": {
+        "type": "IfcLocalPlacement",
+        "relativePlacement": {
+          "type": "IfcAxis2Placement3D",
+          "location": {
+            "type": "IfcCartesianPoint",
+            "coordinates": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "compositionType": "ELEMENT",
+      "buildingAddress": {
+        "type": "IfcPostalAddress",
+        "region": "Unknown"
+      },
+      "decomposes": [
+        {
+          "type": "IfcRelAggregates",
+          "ref": "{8770f253-84ce-404a-9310-9864987aa353}"
+        }
+      ],
+      "containsElements": [
+        {
+          "type": "IfcRelContainedInSpatialStructure",
+          "ref": "{5e50802d-76c1-4fa4-9b6a-7d3f7ca266e5}"
+        }
+      ]
+    },
+    {
+      "type": "IfcReinforcingBarType",
+      "globalId": "{e7296ea5-40e2-427f-847e-9c25553f0cbc}",
+      "name": "12 Diameter Ligature",
+      "representationMaps": [
+        {
+          "type": "IfcRepresentationMap",
+          "mappingOrigin": {
+            "type": "IfcAxis2Placement3D",
+            "location": {
+              "type": "IfcCartesianPoint",
+              "coordinates": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "mappedRepresentation": {
+            "type": "IfcShapeRepresentation",
+            "ref": "14607051-371c-4ae6-a565-19a52b07da15"
+          }
+        }
+      ],
+      "predefinedType": "LIGATURE",
+      "nominalDiameter": 12.0,
+      "crossSectionArea": 113.097335529233,
+      "barLength": 1150.0,
+      "barSurface": "TEXTURED",
+      "hasAssociations": [
+        {
+          "type": "IfcRelAssociatesMaterial",
+          "ref": "{e4d91a36-c007-46ab-b680-910975d964a1}"
+        }
+      ],
+      "types": [
+        {
+          "type": "IfcRelDefinesByType",
+          "ref": "{14847506-3aee-478b-9544-e3dee44f94c8}"
+        }
+      ]
+    },
+    {
+      "type": "IfcShapeRepresentation",
+      "contextOfItems": {
+        "type": "IfcGeometricRepresentationSubContext",
+        "ref": "b1519d2d-5246-4efc-8d64-b672633b09ba"
+      },
+      "representationIdentifier": "Body",
+      "representationType": "AdvancedSweptSolid",
+      "items": [
+        {
+          "type": "IfcSweptDiskSolid",
+          "directrix": {
+            "type": "IfcIndexedPolyCurve",
+            "points": {
+              "type": "IfcCartesianPointList3D",
+              "coordList": [
+                [
+                  -69.0,
+                  0.0,
+                  -122.0
+                ],
+                [
+                  -69.0,
+                  0.0,
+                  -79.0
+                ],
+                [
+                  -54.9411254969544,
+                  0.0,
+                  -45.0588745030457
+                ],
+                [
+                  -21.0000000000001,
+                  0.0,
+                  -31.0
+                ],
+                [
+                  21.0,
+                  0.0,
+                  -31.0
+                ],
+                [
+                  54.9411254969543,
+                  0.0,
+                  -45.0588745030456
+                ],
+                [
+                  69.0,
+                  0.0,
+                  -78.9999999999999
+                ],
+                [
+                  69.0,
+                  8.9e-16,
+                  -321.0
+                ],
+                [
+                  54.993978595716,
+                  1.21791490472038,
+                  -354.941125496954
+                ],
+                [
+                  21.1804517666064,
+                  4.1582215855126,
+                  -369.0
+                ],
+                [
+                  -20.6616529376114,
+                  7.79666547283599,
+                  -369.0
+                ],
+                [
+                  -54.4751797667207,
+                  10.7369721536282,
+                  -354.941125496954
+                ],
+                [
+                  -68.4812011710042,
+                  11.9548870583485,
+                  -320.999999999999
+                ],
+                [
+                  -69.0,
+                  12.0,
+                  -79.0
+                ],
+                [
+                  -54.9411254969544,
+                  12.0,
+                  -45.0588745030457
+                ],
+                [
+                  -21.0000000000001,
+                  12.0,
+                  -31.0
+                ],
+                [
+                  21.0,
+                  12.0,
+                  -31.0
+                ],
+                [
+                  54.9411254969543,
+                  12.0,
+                  -45.0588745030456
+                ],
+                [
+                  69.0,
+                  12.0,
+                  -78.9999999999999
+                ],
+                [
+                  -69.0,
+                  0.0,
+                  -122.0
+                ]
+              ]
+            },
+            "segments": [
+              {
+                "type": "IfcLineIndex",
+                "value": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "type": "IfcArcIndex",
+                "value": [
+                  2,
+                  3,
+                  4
+                ]
+              },
+              {
+                "type": "IfcLineIndex",
+                "value": [
+                  4,
+                  5
+                ]
+              },
+              {
+                "type": "IfcArcIndex",
+                "value": [
+                  5,
+                  6,
+                  7
+                ]
+              },
+              {
+                "type": "IfcLineIndex",
+                "value": [
+                  7,
+                  8
+                ]
+              },
+              {
+                "type": "IfcArcIndex",
+                "value": [
+                  8,
+                  9,
+                  10
+                ]
+              },
+              {
+                "type": "IfcLineIndex",
+                "value": [
+                  10,
+                  11
+                ]
+              },
+              {
+                "type": "IfcArcIndex",
+                "value": [
+                  11,
+                  12,
+                  13
+                ]
+              },
+              {
+                "type": "IfcLineIndex",
+                "value": [
+                  13,
+                  14
+                ]
+              },
+              {
+                "type": "IfcArcIndex",
+                "value": [
+                  14,
+                  15,
+                  16
+                ]
+              },
+              {
+                "type": "IfcLineIndex",
+                "value": [
+                  16,
+                  17
+                ]
+              },
+              {
+                "type": "IfcArcIndex",
+                "value": [
+                  17,
+                  18,
+                  19
+                ]
+              },
+              {
+                "type": "IfcLineIndex",
+                "value": [
+                  19,
+                  20
+                ]
+              }
+            ]
+          },
+          "radius": 6.0
+        }
+      ],
+      "representationMap": [
+        {
+          "type": "IfcRepresentationMap",
+          "mappingOrigin": {
+            "type": "IfcAxis2Placement3D",
+            "location": {
+              "type": "IfcCartesianPoint",
+              "coordinates": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "mappedRepresentation": {
+            "type": "IfcShapeRepresentation",
+            "ref": "14607051-371c-4ae6-a565-19a52b07da15"
+          }
+        }
+      ],
+      "globalId": "14607051-371c-4ae6-a565-19a52b07da15"
+    },
+    {
+      "type": "IfcShapeRepresentation",
+      "contextOfItems": {
+        "type": "IfcGeometricRepresentationSubContext",
+        "ref": "b1519d2d-5246-4efc-8d64-b672633b09ba"
+      },
+      "representationIdentifier": "Body",
+      "representationType": "MappedRepresentation",
+      "items": [
+        {
+          "type": "IfcMappedItem",
+          "mappingSource": {
+            "type": "IfcRepresentationMap",
+            "mappingOrigin": {
+              "type": "IfcAxis2Placement3D",
+              "location": {
+                "type": "IfcCartesianPoint",
+                "coordinates": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "mappedRepresentation": {
+              "type": "IfcShapeRepresentation",
+              "ref": "14607051-371c-4ae6-a565-19a52b07da15"
+            }
+          },
+          "mappingTarget": {
+            "type": "IfcCartesianTransformationOperator3D",
+            "axis1": {
+              "type": "IfcDirection",
+              "directionRatios": [
+                1.0,
+                0.0,
+                0.0
+              ]
+            },
+            "axis2": {
+              "type": "IfcDirection",
+              "directionRatios": [
+                0.0,
+                1.0,
+                0.0
+              ]
+            },
+            "localOrigin": {
+              "type": "IfcCartesianPoint",
+              "coordinates": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "scale": 1.0,
+            "axis3": {
+              "type": "IfcDirection",
+              "directionRatios": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          }
+        }
+      ],
+      "ofProductRepresentation": [
+        {
+          "type": "IfcProductDefinitionShape",
+          "representations": [
+            {
+              "type": "IfcShapeRepresentation",
+              "ref": "3d800ac1-68b2-49af-9c91-703e34b3b459"
+            }
+          ]
+        }
+      ],
+      "globalId": "3d800ac1-68b2-49af-9c91-703e34b3b459"
+    },
+    {
+      "type": "IfcOwnerHistory",
+      "owningUser": {
+        "type": "IfcPersonAndOrganization",
+        "thePerson": {
+          "type": "IfcPerson",
+          "identification": "Jon",
+          "familyName": "Jon"
+        },
+        "theOrganization": {
+          "type": "IfcOrganization",
+          "name": "Geometry Gym Pty Ltd"
+        }
+      },
+      "owningApplication": {
+        "type": "IfcApplication",
+        "applicationDeveloper": {
+          "type": "IfcOrganization",
+          "name": "Geometry Gym Pty Ltd"
+        },
+        "version": "1.0.0.0",
+        "applicationFullName": "ggRhinoIFC - Geometry Gym Plug-in for Rhino3d",
+        "applicationIdentifier": "ggRhinoIFC"
+      },
+      "changeAction": "ADDED",
+      "lastModifiedDate": 1418084875,
+      "creationDate": 1418084875,
+      "globalId": "6d6e67fa-c6fb-4ab9-bd11-dca3dd0bddec"
+    },
+    {
+      "type": "IfcGeometricRepresentationContext",
+      "contextType": "Model",
+      "coordinateSpaceDimension": 3,
+      "precision": 0.0001,
+      "worldCoordinateSystem": {
+        "type": "IfcAxis2Placement3D",
+        "location": {
+          "type": "IfcCartesianPoint",
+          "coordinates": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "trueNorth": {
+        "type": "IfcDirection",
+        "directionRatios": [
+          0.0,
+          1.0
+        ]
+      },
+      "hasSubContexts": [
+        {
+          "type": "IfcGeometricRepresentationSubContext",
+          "ref": "56a6900d-4ee8-487d-8e38-3768d27a50b7"
+        },
+        {
+          "type": "IfcGeometricRepresentationSubContext",
+          "ref": "b1519d2d-5246-4efc-8d64-b672633b09ba"
+        }
+      ],
+      "globalId": "ac6dcbbd-a289-4a73-8960-59e0b6851ebc"
+    },
+    {
+      "type": "IfcGeometricRepresentationContext",
+      "contextType": "Model",
+      "coordinateSpaceDimension": 3,
+      "precision": 0.0001,
+      "worldCoordinateSystem": {
+        "type": "IfcAxis2Placement3D",
+        "location": {
+          "type": "IfcCartesianPoint",
+          "coordinates": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "trueNorth": {
+        "type": "IfcDirection",
+        "directionRatios": [
+          0.0,
+          1.0
+        ]
+      },
+      "globalId": "e7d6b459-0920-49ad-98f9-a45fbecd9221"
+    },
+    {
+      "type": "IfcGeometricRepresentationSubContext",
+      "contextIdentifier": "Axis",
+      "contextType": "Model",
+      "parentContext": {
+        "type": "IfcGeometricRepresentationContext",
+        "ref": "ac6dcbbd-a289-4a73-8960-59e0b6851ebc"
+      },
+      "targetView": "MODEL_VIEW",
+      "globalId": "56a6900d-4ee8-487d-8e38-3768d27a50b7"
+    },
+    {
+      "type": "IfcGeometricRepresentationSubContext",
+      "contextIdentifier": "Body",
+      "contextType": "Model",
+      "parentContext": {
+        "type": "IfcGeometricRepresentationContext",
+        "ref": "ac6dcbbd-a289-4a73-8960-59e0b6851ebc"
+      },
+      "targetView": "MODEL_VIEW",
+      "representationsInContext": [
+        {
+          "type": "IfcShapeRepresentation",
+          "ref": "14607051-371c-4ae6-a565-19a52b07da15"
+        },
+        {
+          "type": "IfcShapeRepresentation",
+          "ref": "3d800ac1-68b2-49af-9c91-703e34b3b459"
+        }
+      ],
+      "globalId": "b1519d2d-5246-4efc-8d64-b672633b09ba"
+    },
+    {
+      "type": "IfcRelAssociatesDocument",
+      "globalId": "{83e6d182-61ea-4da6-a183-d912c1c611bb}",
+      "relatedObjects": [
+        {
+          "type": "IfcProject",
+          "ref": "{4b610cbf-98be-49a1-9d21-e6a04a1e1bca}"
+        }
+      ],
+      "relatingDocument": {
+        "type": "IfcDocumentReference",
+        "identification": "MyReinforcementCode",
+        "name": "MyCodeISO3766"
+      }
+    },
+    {
+      "type": "IfcRelAssociatesMaterial",
+      "globalId": "{e4d91a36-c007-46ab-b680-910975d964a1}",
+      "name": "MatAssoc",
+      "description": "Material Associates",
+      "relatedObjects": [
+        {
+          "type": "IfcReinforcingBarType",
+          "ref": "{e7296ea5-40e2-427f-847e-9c25553f0cbc}"
+        }
+      ],
+      "relatingMaterial": {
+        "type": "IfcMaterial",
+        "name": "ReinforcingSteel"
+      }
+    },
+    {
+      "type": "IfcRelContainedInSpatialStructure",
+      "globalId": "{5e50802d-76c1-4fa4-9b6a-7d3f7ca266e5}",
+      "name": "Building",
+      "description": "Building Container for Elements",
+      "relatedElements": [
+        {
+          "type": "IfcReinforcingBar",
+          "ref": "{c805ace2-25b6-4826-a524-70f97d4a9959}"
+        }
+      ],
+      "relatingStructure": {
+        "type": "IfcBuilding",
+        "ref": "{20c95a95-626a-4801-8a73-5a93854cd4fc}"
+      }
+    },
+    {
+      "type": "IfcRelAggregates",
+      "globalId": "{8770f253-84ce-404a-9310-9864987aa353}",
+      "name": "Project Container",
+      "description": "Project Container for Buildings",
+      "relatingObject": {
+        "type": "IfcProject",
+        "ref": "{4b610cbf-98be-49a1-9d21-e6a04a1e1bca}"
+      },
+      "relatedObjects": [
+        {
+          "type": "IfcBuilding",
+          "ref": "{20c95a95-626a-4801-8a73-5a93854cd4fc}"
+        }
+      ]
+    },
+    {
+      "type": "IfcRelDefinesByType",
+      "globalId": "{14847506-3aee-478b-9544-e3dee44f94c8}",
+      "name": "12 Diameter Ligature",
+      "relatedObjects": [
+        {
+          "type": "IfcReinforcingBar",
+          "ref": "{c805ace2-25b6-4826-a524-70f97d4a9959}"
+        }
+      ],
+      "relatingType": {
+        "type": "IfcReinforcingBarType",
+        "ref": "{e7296ea5-40e2-427f-847e-9c25553f0cbc}"
+      }
+    }
+  ]
+}
