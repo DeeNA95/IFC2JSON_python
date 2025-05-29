@@ -24,14 +24,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import os
 import uuid
+from datetime import datetime
+
 import ifcopenshell
 import ifcopenshell.geom
 import ifcopenshell.guid as guid
-import ifcjson.common as common
-from datetime import datetime
-from ifcopenshell.entity_instance import entity_instance
+from . import common
 
 
 class IFC2JSON4(common.IFC2JSON):
@@ -99,9 +98,9 @@ class IFC2JSON4(common.IFC2JSON):
                 relationships.append(entity)
             else:
                 self.rootObjects[entity.id()] = guid.split(
-                    guid.expand(entity.GlobalId))[1:-1]
+                    guid.expand(entity.GlobalId))
 
-        # seperately collect all entity types where a GlobalId needs to be added
+        # separately collect all entity types where a GlobalId needs to be added
         # for entity in self.ifcModel.by_type('IfcMaterialDefinition'):
         #     self.rootObjects[entity.id()] = str(uuid.uuid4())
         for entity in self.ifcModel.by_type('IfcShapeRepresentation'):
@@ -114,7 +113,7 @@ class IFC2JSON4(common.IFC2JSON):
         # Seperately add all IfcRelationship entities so they appear at the end of the list
         for entity in relationships:
             self.rootObjects[entity.id()] = guid.split(
-                guid.expand(entity.GlobalId))[1:-1]
+                guid.expand(entity.GlobalId))
 
         for key in self.rootObjects:
             entity = self.ifcModel.by_id(key)
@@ -211,7 +210,7 @@ class IFC2JSON4(common.IFC2JSON):
                     pointlist = self.ifcModel.createIfcCartesianPointList3D(
                         vertsList)
                     shape = self.ifcModel.createIfcTriangulatedFaceSet(pointlist,
-                        None, None, facesList, None)
+                                                                       None, None, facesList, None)
 
                     body_representation = self.ifcModel.createIfcShapeRepresentation(
                         context, "Body", "Tessellation", [shape])

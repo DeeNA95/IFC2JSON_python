@@ -1,4 +1,4 @@
-import ifcjson.mesh as mesh
+from . import mesh
 
 class IFCJSON:
     def __init__(self, json):

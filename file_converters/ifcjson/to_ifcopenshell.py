@@ -4,9 +4,8 @@ import uuid
 
 import ifcopenshell
 import ifcopenshell.guid
-import ifcopenshell.template
 
-from ifcjson.reader import IFCJSON
+from .reader import IFCJSON
 
 # Specific JSON types that need mapping
 INCLUDE_ATTRIBUTES = ['value']
@@ -18,8 +17,7 @@ EXCLUDE_ATTRIBUTES = ['id', 'type', 'dimensions']
 class JSON2IFC(IFCJSON):
 
     def __init__(self, inFilePath):
-
-        self.fileSchema = None
+        self.version = None
         self.schemaIdentifier = None
         self.timeString = None
         self.organization = None
@@ -27,30 +25,31 @@ class JSON2IFC(IFCJSON):
         self.applicationVersion = None
         self.timeStamp = None
         self.application = None
+        self.model = None
 
         with open(inFilePath) as ifcJsonFile:
             ifcJson = json.load(ifcJsonFile)
 
-            # When ifcJson data is a complete filestructure including header
-            if type(ifcJson) is dict:
-                self.parseHeader(ifcJson)
-                if 'fileSchema' in ifcJson:
-                    if ifcJson['fileSchema'] == 'IFC.JSON-4':
-                        self.schemaIdentifier = 'IFC4' # 'IFC2X3'
-                        
-                        self.timestamp = None
-                        
-                        if 'data' in ifcJson:
-                            self.collect_objects(ifcJson['data'])
-                        else:
-                            print('Not a valid ifcJson file')
+            # Ensure the input is a dictionary
+            if not isinstance(ifcJson, dict):
+                raise ValueError("Input JSON must be a dictionary.")
 
-                else:
-                    print('Not a valid ifcJson file')
+            # Check for required keys
+            if 'version' not in ifcJson or 'data' not in ifcJson:
+                raise ValueError(
+                    f"Not a valid ifcJson file: missing 'version' or 'data'. Keys: {list(ifcJson.keys())}"
+                )
 
-            # When ifcJson data is just a list of objects
-            elif type(ifcJson) is dict:
-                self.collect_objects(ifcJson['data'])
+            # Check for supported schema
+            if ifcJson['version'] != '0.0.1':
+                raise ValueError(
+                    f"Unsupported version: {ifcJson['version']}. Only '0.0.1' is supported."
+                )
+
+            self.parseHeader(ifcJson)
+            self.schemaIdentifier = 'IFC4'
+            self.timestamp = None
+            self.collect_objects(ifcJson['data'])
 
     def toLowerCamelcase(self, string):
         """Convert string from upper to lower camelCase"""
@@ -76,7 +75,7 @@ class JSON2IFC(IFCJSON):
         self.data["data"] = data
         self.data['type'] = self.data['data'].apply(pd.Series)['type']
         self.data['uuid'] = self.data['data'].apply(pd.Series)['globalId']
-        return(self.data)
+        return (self.data)
 
     def createNestedEntity(self, attributes):
         entityType = attributes['type']
