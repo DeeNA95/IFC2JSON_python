@@ -38,7 +38,6 @@ class IFC2JSON4(common.IFC2JSON):
     SCHEMA_VERSION = '0.0.1'
 
     settings = ifcopenshell.geom.settings()
-    settings.set(settings.USE_WORLD_COORDS, False)
 
     def __init__(self,
                  ifcModel,

@@ -76,9 +76,8 @@ class IFC2JSON5a(common.IFC2JSON):
     }
 
     settings = ifcopenshell.geom.settings()
-    settings.USE_PYTHON_OPENCASCADE = True
-    settings.set(settings.USE_WORLD_COORDS, True)
-    settings.set(settings.EXCLUDE_SOLIDS_AND_SURFACES, False)
+    settings.set("iterator-output", ifcopenshell.ifcopenshell_wrapper.NATIVE)
+    settings.set("use-world-coords", True)
 
     def __init__(self, ifcModel,
                  COMPACT=False,
