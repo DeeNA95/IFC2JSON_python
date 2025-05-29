@@ -1,0 +1,390 @@
+{
+  "type": "IFC.JSON",
+  "version": "0.0.1",
+  "schemaIdentifier": "IFC4",
+  "originatingSystem": "IFC2JSON_python Version 0.0.1",
+  "preprocessorVersion": "IfcOpenShell 0.0.0",
+  "timeStamp": "2025-05-29T12:50:13",
+  "data": [
+    {
+      "type": "IfcProject",
+      "globalId": "{3b7266e8-127d-4e31-a10d-59cd1eb671a7}",
+      "ownerHistory": {
+        "type": "IfcOwnerHistory",
+        "ref": "456eaf2d-e52f-47cc-b277-3e1083d32b53"
+      },
+      "name": "proxy with tessellation",
+      "representationContexts": [
+        {
+          "type": "IfcGeometricRepresentationContext",
+          "ref": "e93d6a54-cfc6-42cf-af9d-5605fbc9db66"
+        }
+      ],
+      "unitsInContext": {
+        "type": "IfcUnitAssignment",
+        "units": [
+          {
+            "type": "IfcSIUnit",
+            "unitType": "LENGTHUNIT",
+            "prefix": "MILLI",
+            "name": "METRE",
+            "dimensions": {
+              "type": "IfcDimensionalExponents",
+              "LengthExponent": 1
+            }
+          },
+          {
+            "type": "IfcConversionBasedUnit",
+            "dimensions": {
+              "type": "IfcDimensionalExponents",
+              "lengthExponent": 0,
+              "massExponent": 0,
+              "timeExponent": 0,
+              "electricCurrentExponent": 0,
+              "thermodynamicTemperatureExponent": 0,
+              "amountOfSubstanceExponent": 0,
+              "luminousIntensityExponent": 0
+            },
+            "unitType": "PLANEANGLEUNIT",
+            "name": "degree",
+            "conversionFactor": {
+              "type": "IfcMeasureWithUnit",
+              "valueComponent": {
+                "type": "IfcPlaneAngleMeasure",
+                "value": 0.017453293
+              },
+              "unitComponent": {
+                "type": "IfcSIUnit",
+                "unitType": "PLANEANGLEUNIT",
+                "name": "RADIAN",
+                "dimensions": {
+                  "type": "IfcDimensionalExponents"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "isDecomposedBy": [
+        {
+          "type": "IfcRelAggregates",
+          "ref": "{a22f491f-f885-4116-8813-24d281d90c1d}"
+        }
+      ]
+    },
+    {
+      "type": "IfcBuildingElementProxy",
+      "globalId": "{6e779871-965f-4c83-a22f-9969c19db132}",
+      "name": "P-1",
+      "description": "sample proxy",
+      "objectPlacement": {
+        "type": "IfcLocalPlacement",
+        "placementRelTo": {
+          "type": "IfcLocalPlacement",
+          "relativePlacement": {
+            "type": "IfcAxis2Placement3D",
+            "location": {
+              "type": "IfcCartesianPoint",
+              "coordinates": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        "relativePlacement": {
+          "type": "IfcAxis2Placement3D",
+          "location": {
+            "type": "IfcCartesianPoint",
+            "coordinates": [
+              1000.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "representation": {
+        "type": "IfcProductDefinitionShape",
+        "representations": [
+          {
+            "type": "IfcShapeRepresentation",
+            "ref": "8d34751b-56e3-4130-850c-a322772d5734"
+          }
+        ]
+      },
+      "containedInStructure": [
+        {
+          "type": "IfcRelContainedInSpatialStructure",
+          "ref": "{9dc7b8ee-7617-4022-8378-5b8ade78f5fc}"
+        }
+      ]
+    },
+    {
+      "type": "IfcBuilding",
+      "globalId": "{8f323372-d7b4-4d74-85d2-001ba786c219}",
+      "name": "Test Building",
+      "objectPlacement": {
+        "type": "IfcLocalPlacement",
+        "relativePlacement": {
+          "type": "IfcAxis2Placement3D",
+          "location": {
+            "type": "IfcCartesianPoint",
+            "coordinates": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "compositionType": "ELEMENT",
+      "decomposes": [
+        {
+          "type": "IfcRelAggregates",
+          "ref": "{a22f491f-f885-4116-8813-24d281d90c1d}"
+        }
+      ],
+      "containsElements": [
+        {
+          "type": "IfcRelContainedInSpatialStructure",
+          "ref": "{9dc7b8ee-7617-4022-8378-5b8ade78f5fc}"
+        }
+      ]
+    },
+    {
+      "type": "IfcShapeRepresentation",
+      "contextOfItems": {
+        "type": "IfcGeometricRepresentationSubContext",
+        "ref": "e6d8b108-46bc-484c-b0bb-040456821340"
+      },
+      "representationIdentifier": "Body",
+      "representationType": "Tessellation",
+      "items": [
+        {
+          "type": "IfcTriangulatedFaceSet",
+          "coordinates": {
+            "type": "IfcCartesianPointList3D",
+            "coordList": [
+              [
+                -500.0,
+                -500.0,
+                0.0
+              ],
+              [
+                500.0,
+                -500.0,
+                0.0
+              ],
+              [
+                500.0,
+                500.0,
+                0.0
+              ],
+              [
+                -500.0,
+                500.0,
+                0.0
+              ],
+              [
+                -500.0,
+                -500.0,
+                2000.0
+              ],
+              [
+                500.0,
+                -500.0,
+                2000.0
+              ],
+              [
+                500.0,
+                500.0,
+                2000.0
+              ],
+              [
+                -500.0,
+                500.0,
+                2000.0
+              ]
+            ]
+          },
+          "closed": true,
+          "coordIndex": [
+            [
+              1,
+              6,
+              5
+            ],
+            [
+              1,
+              2,
+              6
+            ],
+            [
+              6,
+              2,
+              7
+            ],
+            [
+              7,
+              2,
+              3
+            ],
+            [
+              7,
+              8,
+              6
+            ],
+            [
+              6,
+              8,
+              5
+            ],
+            [
+              5,
+              8,
+              1
+            ],
+            [
+              1,
+              8,
+              4
+            ],
+            [
+              4,
+              2,
+              1
+            ],
+            [
+              2,
+              4,
+              3
+            ],
+            [
+              4,
+              8,
+              7
+            ],
+            [
+              7,
+              3,
+              4
+            ]
+          ]
+        }
+      ],
+      "ofProductRepresentation": [
+        {
+          "type": "IfcProductDefinitionShape",
+          "representations": [
+            {
+              "type": "IfcShapeRepresentation",
+              "ref": "8d34751b-56e3-4130-850c-a322772d5734"
+            }
+          ]
+        }
+      ],
+      "globalId": "8d34751b-56e3-4130-850c-a322772d5734"
+    },
+    {
+      "type": "IfcOwnerHistory",
+      "owningUser": {
+        "type": "IfcPersonAndOrganization",
+        "thePerson": {
+          "type": "IfcPerson",
+          "familyName": "Liebich",
+          "givenName": "Thomas"
+        },
+        "theOrganization": {
+          "type": "IfcOrganization",
+          "name": "buildingSMART International"
+        }
+      },
+      "owningApplication": {
+        "type": "IfcApplication",
+        "applicationDeveloper": {
+          "type": "IfcOrganization",
+          "name": "buildingSMART International"
+        },
+        "version": "1.0",
+        "applicationFullName": "IFC text editor",
+        "applicationIdentifier": "ifcTE"
+      },
+      "changeAction": "ADDED",
+      "lastModifiedDate": 1320688800,
+      "creationDate": 1320688800,
+      "globalId": "456eaf2d-e52f-47cc-b277-3e1083d32b53"
+    },
+    {
+      "type": "IfcGeometricRepresentationContext",
+      "contextType": "Model",
+      "coordinateSpaceDimension": 3,
+      "precision": 1e-05,
+      "worldCoordinateSystem": {
+        "type": "IfcAxis2Placement3D",
+        "location": {
+          "type": "IfcCartesianPoint",
+          "coordinates": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "hasSubContexts": [
+        {
+          "type": "IfcGeometricRepresentationSubContext",
+          "ref": "e6d8b108-46bc-484c-b0bb-040456821340"
+        }
+      ],
+      "globalId": "e93d6a54-cfc6-42cf-af9d-5605fbc9db66"
+    },
+    {
+      "type": "IfcGeometricRepresentationSubContext",
+      "contextIdentifier": "Body",
+      "contextType": "Model",
+      "parentContext": {
+        "type": "IfcGeometricRepresentationContext",
+        "ref": "e93d6a54-cfc6-42cf-af9d-5605fbc9db66"
+      },
+      "targetView": "MODEL_VIEW",
+      "representationsInContext": [
+        {
+          "type": "IfcShapeRepresentation",
+          "ref": "8d34751b-56e3-4130-850c-a322772d5734"
+        }
+      ],
+      "globalId": "e6d8b108-46bc-484c-b0bb-040456821340"
+    },
+    {
+      "type": "IfcRelContainedInSpatialStructure",
+      "globalId": "{9dc7b8ee-7617-4022-8378-5b8ade78f5fc}",
+      "name": "Physical model",
+      "relatedElements": [
+        {
+          "type": "IfcBuildingElementProxy",
+          "ref": "{6e779871-965f-4c83-a22f-9969c19db132}"
+        }
+      ],
+      "relatingStructure": {
+        "type": "IfcBuilding",
+        "ref": "{8f323372-d7b4-4d74-85d2-001ba786c219}"
+      }
+    },
+    {
+      "type": "IfcRelAggregates",
+      "globalId": "{a22f491f-f885-4116-8813-24d281d90c1d}",
+      "relatingObject": {
+        "type": "IfcProject",
+        "ref": "{3b7266e8-127d-4e31-a10d-59cd1eb671a7}"
+      },
+      "relatedObjects": [
+        {
+          "type": "IfcBuilding",
+          "ref": "{8f323372-d7b4-4d74-85d2-001ba786c219}"
+        }
+      ]
+    }
+  ]
+}

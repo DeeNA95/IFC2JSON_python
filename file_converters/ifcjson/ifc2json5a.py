@@ -24,14 +24,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import os
-import uuid
+from datetime import datetime
+
 import ifcopenshell
 import ifcopenshell.geom
 import ifcopenshell.guid as guid
-import ifcjson.common as common
-from datetime import datetime
-from ifcopenshell.entity_instance import entity_instance
+
+from . import common
 
 
 class IFC2JSON5a(common.IFC2JSON):
