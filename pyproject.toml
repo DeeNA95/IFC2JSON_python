@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ifc2json"
+version = "0.1.0"
+description = "A tool to convert IFC files to JSON and back."
+authors = [
+    { name="Jan Brouwer", email="jan@brewsky.nl" }
+]
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = ["ifcopenshell","pandas"]
+
+[project.urls]
+"Homepage" = "https://github.com/IFCJSON-Team/IFC2JSON_python"
