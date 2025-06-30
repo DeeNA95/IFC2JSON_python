@@ -59,6 +59,29 @@ After installing with pip, you can import the package in your Python code:
 from ifcjson import ifc2json4, ifc2json5a, mesh, reader, to_ifcopenshell, common
 # Example usage:
 # from ifcjson.ifc2json4 import some_function
+
+import ifcjson
+
+# For IFC.JSON v4
+json_data = ifcjson.IFC2JSON4(
+    "path/to/your.ifc",
+    COMPACT=False,
+    INCLUDE_INVERSE=False,
+    EMPTY_PROPERTIES=False,
+    NO_OWNERHISTORY=False,
+    GEOMETRY=True
+).spf2Json()
+
+# For IFC.JSON v5a
+json_data = ifcjson.IFC2JSON5a(
+    "path/to/your.ifc",
+    COMPACT=False,
+    EMPTY_PROPERTIES=False
+).spf2Json()
+
+import json
+with open("output.json", "w") as f:
+    json.dump(dat, f, indent=2)
 ```
 
 ## Additional Requirements for Roundtrip and IFC.JSON → IFC SPF Conversion
